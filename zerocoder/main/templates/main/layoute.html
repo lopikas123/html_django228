@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {% block title %}
+    {% endblock %}
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <aside class="col-md-3 bg-light p-3">
+            <div class="text-center mb-4">
+                <img src="{% static 'main/img/1680594528_pushinka-top-p-rofl-avatarki-s-kotami-avatarka-instagram-37.jpg' %}" alt="расенган" class="img-fluid rounded-circle" width="150px">
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Главная страница</a>
+                    <a class="nav-link" href="/index">Подробнее о нас</a>
+                    <a class="nav-link" href="/bur">Наши услуги</a>
+                    <a class="nav-link" href="/fom">Портфолио</a>
+                    <a class="nav-link" href="/tou">Контакты</a>
+                    <a class="nav-link" href="{% url 'add_news' %}">Добавить новость</a>
+    </li>
+            </ul>
+        </aside>
+        <main class="col-md-9">
+            <div class="container">
+                <!-- Ваше основное содержание здесь -->
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

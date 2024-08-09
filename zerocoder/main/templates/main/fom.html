@@ -1,0 +1,42 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+<title>Третья страница</title>
+{% endblock %}
+
+{% block content %}
+    {% include 'main/nav.html'%}
+  <div class="container mt-5">
+    <h1>Портфолио</h1>
+    <p>Здесь вы можете ознакомиться с нашими последними проектами и работами. Мы гордимся каждым из них и надеемся, что они вдохновят вас на сотрудничество с нами.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="project1.jpg" class="card-img-top" alt="Проект 1">
+          <div class="card-body">
+            <h5 class="card-title">Проект 1</h5>
+            <p class="card-text">Краткое описание проекта 1.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="project2.jpg" class="card-img-top" alt="Проект 2">
+          <div class="card-body">
+            <h5 class="card-title">Проект 2</h5>
+            <p class="card-text">Краткое описание проекта 2.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="project3.jpg" class="card-img-top" alt="Проект 3">
+          <div class="card-body">
+            <h5 class="card-title">Проект 3</h5>
+            <p class="card-text">Краткое описание проекта 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

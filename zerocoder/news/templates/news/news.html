@@ -1,0 +1,27 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+<title>Вторая страница</title>
+{% endblock %}
+
+{% block content %}
+    <br><h1>Новости</h1><br><br>
+{% if news %}
+{% for new in news %}
+    <div class="card">
+
+            <div class="card" style="width: 70rem;">
+                <div class="card-body">
+                    <h4 class="card-title">{{ new.title }}</h4>
+                    <h5 class="card-subtitle mb-2 text-body-secondary">{{ new.short_description }}</h5>
+                    <p class="card-text">{{ new.text }}</p>
+                    <p class="card-text"><small class="text-muted">{{ new.pub_date }}</small></p>
+                </div>
+            </div>
+    </div>
+{% endfor %}
+{% else %}
+<h4>Новостей ещё нету</h4>
+{% endif %}
+
+{% endblock %}
